@@ -1,48 +1,73 @@
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class ChatBot {
+
     public static void main(String[] args) throws InterruptedException {
 
-        String date, first, avail, tuition, name;
+        Scanner sc = new Scanner(System.in);
 
-        Scanner jp = new Scanner(System.in);
+        System.out.print("Hello! This is STI College AI");
 
-        System.out.println("Hello! This is Sti College Cubao\nWhat is Your Name?");
-        name = jp.nextLine();
-        Thread.sleep(2000);
+        System.out.println("\nWhat Is Your Name? ");
+        String name = sc.nextLine();
+        Thread.sleep(1500);
 
-        System.out.println("Nice to meet you, " + name + ". I'm Your Personal Ai Assistant.");
-        System.out.println("\nHow Can i Help You?");
+        System.out.println("\nNice To Meet You " + name);
+        System.out.println("What can i do for you?");
+        String school = sc.nextLine();
+        Thread.sleep(1500);
 
-        System.out.println("What is the date of enrollment (A)");
-        System.out.println("what is the first day of classes (B)");
+        if (school.equalsIgnoreCase("Enrollment")) {
+            System.out.println("\nSure! I'll Help You With That");
 
-        Thread.sleep(2000);
-        String Letter = jp.nextLine();
+            System.out.println("Fill Up This Form Please: ");
 
-        if (Letter.equalsIgnoreCase("A")) {
-            System.out.println("\nthe date is june");
+            System.out.print("\nYour Full Name: ");
+            String a1 = sc.nextLine();
+            System.out.print("Course: ");
+            String a2 = sc.nextLine();
+            System.out.print("Section: ");
+            String a3 = sc.nextLine();
+            System.out.print("Email Address ");
+            String a4 = sc.nextLine();
+            Thread.sleep(2500);
 
-        } else if (Letter.equalsIgnoreCase("B")) {
-            System.out.println("The first day of classes is june");
+            System.out.println("\nThank You For Enrolling In STI College\n Here Is Your Form");
+            System.out.println(a1);
+            System.out.println(a2);
+            System.out.println(a3);
+            System.out.println(a4);
+            System.out.println("Please Proceed To The Cashier and Registrar for your payment");
+
+        } else if (school.equalsIgnoreCase("Transfer")) {
+            System.out.println("\nSure! I'll Help You With That");
+
+            System.out.println("Fill Up This Form Please: ");
+
+            System.out.print("\nYour Full Name: ");
+            String b1 = sc.nextLine();
+            System.out.print("Course: ");
+            String b2 = sc.nextLine();
+            System.out.print("Section: ");
+            String b3 = sc.nextLine();
+            System.out.print("Email Address: ");
+            String b4 = sc.nextLine();
+            Thread.sleep(2500);
+
+            System.out.println("\nThank You For Enrolling In STI College\n Here Is Your Form");
+            System.out.println(b1);
+            System.out.println(b2);
+            System.out.println(b3);
+            System.out.println(b4);
+            System.out.println("Please Proceed To The Cashier and Registrar for more assistant");
 
         } else {
-            System.out.println("Sorry i cant answer your question");
-
-        }
-        Thread.sleep(2000);
-        System.out.println("\nYou Wanna Know About Courses?");
-        System.out.println("\nYes/No?");
-        String question = jp.nextLine();
-
-        if (question.equalsIgnoreCase("Yes")) {
-            System.out.println("Great Press The Letter You Wanna Know About");
-            System.out.println("Available Courses And Tuition Fee (A)");
-            System.out.println("");
-
+            System.out.println("\nSorry I Can't Help You, You Can Ask The Registrar For Assistant");
+            System.out.println("I Can Help for Enrollment And Transfer Only, Thank You");
         }
 
     }
+
 }
