@@ -36,14 +36,13 @@ public class ChatBot {
         System.out.println("\nYou Wanna Know About Courses?");
         System.out.println("\nYes/No?");
         String question = jp.nextLine();
-        
+
         if (question.equalsIgnoreCase("Yes")) {
             System.out.println("Great Press The Letter You Wanna Know About");
             System.out.println("Available Courses And Tuition Fee (A)");
             System.out.println("");
-           
-        }Thread.sleep(2000); 
-        
+
+        }
 
     }
 }
